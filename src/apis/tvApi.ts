@@ -1,16 +1,17 @@
-import { url } from "inspector";
-import axiosInstance from "./index";
+import axiosInstance from './index';
 
-export const latestApi = () => axiosInstance.get(url: '/tv/latest');
+export const latestApi = () => axiosInstance.get('/tv/latest');
 
-export const airingTodayApi = () => axiosInstance.get(url: '/on_the_air/');
+export const airingTodayApi = () => axiosInstance.get('/tv/airing_today');
 
-export const popularApi = () => axiosInstance.get(url: '/popular');
+export const onTheAirApi = () => axiosInstance.get('/tv/on_the_air');
 
-export const toRatedApi = () => axiosInstance.get(url: '/tv/');
+export const popularApi = () => axiosInstance.get('/tv/popular');
 
-export const datailApi = (tvId: string) => axiosInstance.get(url: `/tv/${tvId}`);
+export const topRatedApi = () => axiosInstance.get('/tv/top_rated');
 
-export const similarApi = (tvId: string) => axiosInstance.get(url: `/tv/${tvId}/similer`);
+export const detailApi = (id: string) => axiosInstance.get(`/tv/${id}`);
 
-export const searchApi = (query: string) => axiosInstance.get(url: `/search/tv?query=${query}`);
+export const similarApi = (id: string) => axiosInstance.get(`/tv/${id}/similar`);
+
+export const searchApi = (query: string) => axiosInstance.get(`/search/tv?query=${query}`);
